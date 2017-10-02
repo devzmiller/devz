@@ -10,7 +10,8 @@
   <!--
     application.css is where you put your styles
   -->
-  <link rel="stylesheet" href="/css/application.css">
+
+  <link rel="stylesheet" href="/stylesheets/application.css">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
@@ -18,7 +19,11 @@
   <title></title>
 </head>
 <body>
-  <h1><a href="/poems">Poems</a></h1>
+  <header>
+    <img id="moss-header" src="/images/moss_header.jpeg" alt="header image of moss on forest floor">
+    <h1><a href="/poems">Poems</a></h1>
+  </header>
+
   <%= yield %>
 </body>
 </html>

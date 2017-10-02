@@ -1,0 +1,29 @@
+$primary-color: #3d5617;
+$h1-color: #ffffff;
+
+body {
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%
+}
+
+h1 {
+  width: 30%;
+  z-index: 1000;
+  position: relative;
+  top: -250px;
+  margin: auto;
+  a {
+    color: $h1-color;
+    font-size: 3em;
+    text-decoration: none;
+  }
+}
+
+
+#moss-header {
+  width: 100%;
+  z-index: -1000;
+}

@@ -1,0 +1,22 @@
+body {
+  box-sizing: border-box; }
+
+header {
+  width: 100%; }
+
+h1 {
+  width: 30%;
+  z-index: 1000;
+  position: relative;
+  top: -250px;
+  margin: auto; }
+  h1 a {
+    color: #ffffff;
+    font-size: 3em;
+    text-decoration: none; }
+
+#moss-header {
+  width: 100%;
+  z-index: -1000; }
+
+/*# sourceMappingURL=application.css.map */
