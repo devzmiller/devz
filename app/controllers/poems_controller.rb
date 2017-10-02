@@ -16,6 +16,12 @@ get '/poems/:id' do
   erb :'/poems/show'
 end
 
+delete '/poems/:id' do
+  @poem = Poem.find(params[:id])
+  @poem.destroy
+  redirect '/poems'
+end
+
 post '/poems' do
   Poem.create(params[:poem])
   redirect '/poems'

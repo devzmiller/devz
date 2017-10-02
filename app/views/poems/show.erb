@@ -3,3 +3,8 @@
 <p class="poem-body">
   <%= @poem.body %>
 </p>
+
+<form class="delete-button" action="/poems/<%= @poem.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Poem">
+</form>
