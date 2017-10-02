@@ -1,5 +1,5 @@
 <ul class="poem-list">
   <% @poems.each do |poem| %>
-  <li><%= poem.title %></li>
+  <li><a href="/poems/<%= poem.id %>"><%= poem.title %></a></li>
   <% end %>
 </ul>
