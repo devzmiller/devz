@@ -1,0 +1,7 @@
+<ul class="poem-list">
+  <% @poems.each do |poem| %>
+  <li><a href="/poems/<%= poem.id %>"><%= poem.title %></a></li>
+  <% end %>
+</ul>
+
+<a href="/poems/new">Submit a poem</a>
