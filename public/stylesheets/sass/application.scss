@@ -4,6 +4,14 @@ $white: #ffffff;
 $header-black: #222;
 $body-black: #444;
 
+@mixin header-links {
+  position: absolute;
+  a {
+    color: $white;
+    font-size: 1.7em;
+  }
+}
+
 body {
   box-sizing: border-box;
 }
@@ -43,13 +51,21 @@ h1 {
 }
 
 .submit-poem-link {
-  position: absolute;
+  @include header-links;
   top: -75px;
-  left: 80%;
-  a {
-    color: $white;
-    font-size: 1.7em;
-  }
+  right: 30px;
+}
+
+.create-user-link {
+  @include header-links;
+  top: -75px;
+  left: 30px;
+}
+
+.login-link {
+  top: -125px;
+  left: 30px;
+  @include header-links;
 }
 
 #moss-header {

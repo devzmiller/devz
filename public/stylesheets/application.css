@@ -33,8 +33,24 @@ h1 {
 .submit-poem-link {
   position: absolute;
   top: -75px;
-  left: 80%; }
+  right: 30px; }
   .submit-poem-link a {
+    color: #ffffff;
+    font-size: 1.7em; }
+
+.create-user-link {
+  position: absolute;
+  top: -75px;
+  left: 30px; }
+  .create-user-link a {
+    color: #ffffff;
+    font-size: 1.7em; }
+
+.login-link {
+  top: -125px;
+  left: 30px;
+  position: absolute; }
+  .login-link a {
     color: #ffffff;
     font-size: 1.7em; }
 
