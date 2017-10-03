@@ -1,7 +1,11 @@
-<ul class="poem-list">
-  <% @poems.each do |poem| %>
-  <li><a href="/poems/<%= poem.id %>"><%= poem.title %></a></li>
-  <% end %>
-</ul>
+<main>
+  <h2>Latest Poems</h2>
 
-<a href="/poems/new">Submit a poem</a>
+  <ul class="poem-list">
+    <% @poems.each do |poem| %>
+    <li class="poem-list"><a href="/poems/<%= poem.id %>"><%= poem.title %></a></li>
+    <% end %>
+  </ul>
+
+  
+</main>
