@@ -22,7 +22,11 @@ end
 
 get '/poems/:id/edit' do
   @poem = Poem.find(params[:id])
-  erb :'/poems/edit'
+  if @poem.user_id == session[:user_id]
+    erb :'/poems/edit'
+  else
+    redirect '/sessions/new'
+  end
 end
 
 delete '/poems/:id' do
