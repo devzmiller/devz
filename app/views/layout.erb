@@ -35,7 +35,7 @@
         </div>
       <% else %>
       <div class="logout-link">
-        <form class="logout-button" action="/sessions/#{session[:user_id]}" method="post">
+        <form class="logout-button" action="/sessions/<%= session[:user_id] %>" method="post">
           <input type="hidden" name="_method" value="delete">
           <input type="submit" value="Logout">
         </form>

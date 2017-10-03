@@ -30,6 +30,11 @@ h1 {
     font-size: 90px;
     text-align: center; }
 
+form {
+  width: 460px;
+  flex-wrap: wrap;
+  display: flex; }
+
 .submit-poem-link {
   position: absolute;
   top: -75px;
@@ -53,6 +58,50 @@ h1 {
   .login-link a {
     color: #ffffff;
     font-size: 1.7em; }
+
+.logout-link input[type=submit] {
+  position: absolute;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.7em;
+  top: -75px;
+  left: 30px; }
+
+input[type=text] {
+  padding: 10px;
+  margin: 10px;
+  width: 150px;
+  flex-direction: column; }
+
+input[type=email] {
+  padding: 10px;
+  margin: 10px;
+  width: 150px;
+  flex-direction: column; }
+
+input[type=password] {
+  padding: 10px;
+  margin: 10px;
+  width: 150px;
+  flex-direction: column; }
+
+label {
+  padding: 10px;
+  margin: 10px;
+  width: 150px;
+  flex-direction: column;
+  width: 100px; }
+
+input[type=submit] {
+  padding: 10px;
+  margin: 10px;
+  width: 150px;
+  flex-direction: column;
+  width: 100px;
+  display: block;
+  text-align: center;
+  align-items: right; }
 
 #moss-header {
   max-width: 100%;
