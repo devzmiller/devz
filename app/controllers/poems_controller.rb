@@ -8,7 +8,11 @@ get '/poems' do
 end
 
 get '/poems/new' do
-  erb :'/poems/new'
+  if session[:user_id]
+    erb :'/poems/new'
+  else
+    redirect '/sessions/new'
+  end
 end
 
 get '/poems/:id' do
