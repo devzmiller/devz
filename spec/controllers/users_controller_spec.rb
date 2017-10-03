@@ -23,4 +23,12 @@ describe 'UsersController' do
       expect(last_response.status).to eq 200
     end
   end
+
+  describe '/users/:id' do
+    let!(:user) { User.create!(name: "Hamilton Hamstein", email: "ham@ham.com", password: "ham") }
+    it 'returns a 200 status' do
+      get "/users/#{user.id}"
+      expect(last_response.status).to eq 200
+    end
+  end
 end

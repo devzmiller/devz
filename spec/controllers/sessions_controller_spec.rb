@@ -19,5 +19,10 @@ describe 'SessionsController' do
       post '/sessions', {email: "ham@ham.com", password: "ham"}
       expect(last_response.location).to end_with("/users/#{user.id}")
     end
+
+    it 'if username or password is invalid, displays login page again' do
+      post '/sessions', {email: "bob@ham.com", password: "ham"}
+      expect(last_response.status).to eq 200
+    end
   end
 end
