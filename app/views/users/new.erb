@@ -1,0 +1,18 @@
+<form class="new-user" action="/users" method="post">
+  <label for="name">Name:</label>
+  <input type="text" name="user[name]">
+  <label for="email">Email:</label>
+  <input type="email" name="user[email]">
+  <label for="password">Password:</label>
+  <input type="password" name="user[password]">
+  <input type="submit">
+</form>
+<% if @errors %>
+  <ul id="new-user-errors">
+    <% @errors.full_messages.each do |error| %>
+      <li>
+        <%= error %>
+      </li>
+      <% end %>
+  </ul>
+<% end %>
