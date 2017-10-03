@@ -26,12 +26,21 @@
       <div class="submit-poem-link">
         <a href="/poems/new">Submit a poem</a>
       </div>
-      <div class="create-user-link">
-        <a href="/users/new">Create an account</a>
+      <% if session[:user_id] == nil %>
+        <div class="create-user-link">
+          <a href="/users/new">Create an account</a>
+        </div>
+        <div class="login-link">
+          <a href="/sessions/new">Login</a>
+        </div>
+      <% else %>
+      <div class="logout-link">
+        <form class="logout-button" action="/sessions/#{session[:user_id]}" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="Logout">
+        </form>
       </div>
-      <div class="login-link">
-        <a href="/sessions/new">Login</a>
-      </div>
+      <% end %>
     </div>
   </header>
 

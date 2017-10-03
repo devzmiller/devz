@@ -47,9 +47,9 @@ h1 {
     font-size: 1.7em; }
 
 .login-link {
+  position: absolute;
   top: -125px;
-  left: 30px;
-  position: absolute; }
+  left: 30px; }
   .login-link a {
     color: #ffffff;
     font-size: 1.7em; }

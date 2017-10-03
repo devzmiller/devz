@@ -63,9 +63,9 @@ h1 {
 }
 
 .login-link {
+  @include header-links;
   top: -125px;
   left: 30px;
-  @include header-links;
 }
 
 #moss-header {

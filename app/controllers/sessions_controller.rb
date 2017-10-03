@@ -8,6 +8,12 @@ post '/sessions' do
     @error = "Invalid username or password"
     erb :'/sessions/new'
   else
+    session[:user_id] = user.id
     redirect "/users/#{user.id}"
   end
+end
+
+delete '/sessions/:id' do
+  session.clear
+  redirect '/poems'
 end
