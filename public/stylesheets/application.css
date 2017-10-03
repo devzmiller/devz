@@ -30,10 +30,40 @@ h1 {
     font-size: 90px;
     text-align: center; }
 
-form {
+.new-user {
   width: 460px;
   flex-wrap: wrap;
   display: flex; }
+  .new-user label {
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+    flex-direction: column;
+    width: 100px; }
+  .new-user input[type=text] {
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+    flex-direction: column; }
+  .new-user input[type=email] {
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+    flex-direction: column; }
+  .new-user input[type=password] {
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+    flex-direction: column; }
+  .new-user input[type=submit] {
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+    flex-direction: column;
+    width: 100px;
+    display: block;
+    text-align: center;
+    align-items: right; }
 
 .submit-poem-link {
   position: absolute;
@@ -67,41 +97,6 @@ form {
   font-size: 1.7em;
   top: -75px;
   left: 30px; }
-
-input[type=text] {
-  padding: 10px;
-  margin: 10px;
-  width: 150px;
-  flex-direction: column; }
-
-input[type=email] {
-  padding: 10px;
-  margin: 10px;
-  width: 150px;
-  flex-direction: column; }
-
-input[type=password] {
-  padding: 10px;
-  margin: 10px;
-  width: 150px;
-  flex-direction: column; }
-
-label {
-  padding: 10px;
-  margin: 10px;
-  width: 150px;
-  flex-direction: column;
-  width: 100px; }
-
-input[type=submit] {
-  padding: 10px;
-  margin: 10px;
-  width: 150px;
-  flex-direction: column;
-  width: 100px;
-  display: block;
-  text-align: center;
-  align-items: right; }
 
 #moss-header {
   max-width: 100%;

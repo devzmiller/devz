@@ -57,10 +57,30 @@ h1 {
   }
 }
 
-form {
+.new-user {
   width: 460px;
   flex-wrap: wrap;
   display: flex;
+  label {
+    @include user-form-fields;
+    width: 100px;
+  }
+  input[type=text] {
+    @include user-form-fields;
+  }
+  input[type=email] {
+    @include user-form-fields;
+  }
+  input[type=password] {
+    @include user-form-fields;
+  }
+  input[type=submit] {
+    @include user-form-fields;
+    width: 100px;
+    display: block;
+    text-align: center;
+    align-items: right;
+  }
 }
 
 .submit-poem-link {
@@ -91,30 +111,7 @@ form {
   left: 30px;
 }
 
-input[type=text] {
-  @include user-form-fields;
-}
 
-input[type=email] {
-  @include user-form-fields;
-}
-
-input[type=password] {
-  @include user-form-fields;
-}
-
-label {
-  @include user-form-fields;
-  width: 100px;
-}
-
-input[type=submit] {
-  @include user-form-fields;
-  width: 100px;
-  display: block;
-  text-align: center;
-  align-items: right;
-}
 
 #moss-header {
   max-width: 100%;
