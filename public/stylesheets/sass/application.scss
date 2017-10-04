@@ -4,6 +4,21 @@ $white: #ffffff;
 $header-black: #222;
 $body-black: #444;
 
+@mixin header-links {
+  position: absolute;
+  a {
+    color: $white;
+    font-size: 1.7em;
+  }
+}
+
+@mixin user-form-fields {
+  padding: 10px;
+  margin: 10px;
+  width: 150px;
+  flex-direction: column;
+}
+
 body {
   box-sizing: border-box;
 }
@@ -42,15 +57,61 @@ h1 {
   }
 }
 
-.submit-poem-link {
-  position: absolute;
-  top: -75px;
-  left: 80%;
-  a {
-    color: $white;
-    font-size: 1.7em;
+.new-user {
+  width: 460px;
+  flex-wrap: wrap;
+  display: flex;
+  label {
+    @include user-form-fields;
+    width: 100px;
+  }
+  input[type=text] {
+    @include user-form-fields;
+  }
+  input[type=email] {
+    @include user-form-fields;
+  }
+  input[type=password] {
+    @include user-form-fields;
+  }
+  input[type=submit] {
+    @include user-form-fields;
+    width: 100px;
+    display: block;
+    text-align: center;
+    align-items: right;
   }
 }
+
+.submit-poem-link {
+  @include header-links;
+  top: -75px;
+  right: 30px;
+}
+
+.create-user-link {
+  @include header-links;
+  top: -75px;
+  left: 30px;
+}
+
+.login-link {
+  @include header-links;
+  top: -125px;
+  left: 30px;
+}
+
+.logout-link input[type=submit] {
+  position: absolute;
+  background: none;
+  border: none;
+  color: $white;
+  font-size: 1.7em;
+  top: -75px;
+  left: 30px;
+}
+
+
 
 #moss-header {
   max-width: 100%;

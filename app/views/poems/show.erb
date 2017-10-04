@@ -1,13 +1,16 @@
-<h2><%= @poem.title %></h2>
+<main>
+  <h2><%= @poem.title %></h2>
+  <h3><%= @poem.user.name %></h3>
 
-<p class="poem-body">
-  <%= @poem.body %>
-</p>
+  <p class="poem-body">
+    <%= @poem.body %>
+  </p>
 
-<form class="delete-button" action="/poems/<%= @poem.id %>" method="post">
-  <input type="hidden" name="_method" value="delete">
-  <input type="submit" value="Delete Poem">
-</form>
-<form class="edit-button" action="/poems/<%= @poem.id %>/edit" method="get">
-  <input type="submit" value="Edit Poem">
-</form>
+  <form class="delete-button" action="/poems/<%= @poem.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete Poem">
+  </form>
+  <form class="edit-button" action="/poems/<%= @poem.id %>/edit" method="get">
+    <input type="submit" value="Edit Poem">
+  </form>
+</main>

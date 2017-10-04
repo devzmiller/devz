@@ -8,7 +8,11 @@ get '/poems' do
 end
 
 get '/poems/new' do
-  erb :'/poems/new'
+  if session[:user_id]
+    erb :'/poems/new'
+  else
+    redirect '/sessions/new'
+  end
 end
 
 get '/poems/:id' do
@@ -18,7 +22,11 @@ end
 
 get '/poems/:id/edit' do
   @poem = Poem.find(params[:id])
-  erb :'/poems/edit'
+  if @poem.user_id == session[:user_id]
+    erb :'/poems/edit'
+  else
+    redirect '/sessions/new'
+  end
 end
 
 delete '/poems/:id' do
@@ -36,6 +44,10 @@ put '/poems/:id' do
 end
 
 post '/poems' do
-  Poem.create(params[:poem])
-  redirect '/poems'
+  if session[:user_id]
+    poem = Poem.create(title: params[:title], body: params[:body], user_id: session[:user_id])
+    redirect "poems/#{poem.id}"
+  else
+    redirect "/sessions/new"
+  end
 end

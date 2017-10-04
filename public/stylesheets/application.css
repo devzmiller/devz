@@ -30,13 +30,73 @@ h1 {
     font-size: 90px;
     text-align: center; }
 
+.new-user {
+  width: 460px;
+  flex-wrap: wrap;
+  display: flex; }
+  .new-user label {
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+    flex-direction: column;
+    width: 100px; }
+  .new-user input[type=text] {
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+    flex-direction: column; }
+  .new-user input[type=email] {
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+    flex-direction: column; }
+  .new-user input[type=password] {
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+    flex-direction: column; }
+  .new-user input[type=submit] {
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+    flex-direction: column;
+    width: 100px;
+    display: block;
+    text-align: center;
+    align-items: right; }
+
 .submit-poem-link {
   position: absolute;
   top: -75px;
-  left: 80%; }
+  right: 30px; }
   .submit-poem-link a {
     color: #ffffff;
     font-size: 1.7em; }
+
+.create-user-link {
+  position: absolute;
+  top: -75px;
+  left: 30px; }
+  .create-user-link a {
+    color: #ffffff;
+    font-size: 1.7em; }
+
+.login-link {
+  position: absolute;
+  top: -125px;
+  left: 30px; }
+  .login-link a {
+    color: #ffffff;
+    font-size: 1.7em; }
+
+.logout-link input[type=submit] {
+  position: absolute;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.7em;
+  top: -75px;
+  left: 30px; }
 
 #moss-header {
   max-width: 100%;

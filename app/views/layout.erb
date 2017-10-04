@@ -23,9 +23,26 @@
     <img id="moss-header" src="/images/moss_header.jpeg" alt="header image of moss on forest floor">
     <div class="header-wrapper">
       <h1><a href="/poems">Poems</a></h1>
-      <div class="submit-poem-link">
-        <a href="/poems/new">Submit a poem</a>
+      <% if session[:user_id] %>
+        <div class="submit-poem-link">
+          <a href="/poems/new">Submit a poem</a>
+        </div>
+      <% end %>
+      <% if session[:user_id] == nil %>
+        <div class="create-user-link">
+          <a href="/users/new">Create an account</a>
+        </div>
+        <div class="login-link">
+          <a href="/sessions/new">Login</a>
+        </div>
+      <% else %>
+      <div class="logout-link">
+        <form class="logout-button" action="/sessions/<%= session[:user_id] %>" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="Logout">
+        </form>
       </div>
+      <% end %>
     </div>
   </header>
 
