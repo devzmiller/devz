@@ -49,4 +49,6 @@ describe "PoemsController" do
       expect(last_response.location).to end_with "/sessions/new"
     end
   end
+
+  ### TO DO: Restrict put poems and delete poems routes to owners of the poems. Hide/show the buttons based on logged in user.
 end
