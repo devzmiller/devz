@@ -32,4 +32,21 @@ describe "PoemsController" do
       expect(last_response.location).to end_with "/sessions/new"
     end
   end
+
+  describe 'new poem: post /poems' do
+    let!(:user) { User.create!(name: "Hamilton Hamstein", email: "ham@ham.com", password: "ham")}
+    it 'returns redirect' do
+      post "/poems", {user: user, title: "A Poem", body: "Lines of a poem"}, "rack.session" => {user_id: user.id}
+      expect(last_response.redirect?).to be true
+    end
+    it 'redirect to /poems/:id if user is logged in ' do
+      post "/poems", {user: user, title: "A Poem", body: "Lines of a poem"}, "rack.session" => {user_id: user.id}
+      poem = Poem.find_by_title("A Poem")
+      expect(last_response.location).to end_with "/poems/#{poem.id}"
+    end
+    it 'returns redirect if user is logged out' do
+      post "/poems", {user: user, title: "A Poem", body: "Lines of a poem"}
+      expect(last_response.location).to end_with "/sessions/new"
+    end
+  end
 end

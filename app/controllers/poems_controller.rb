@@ -44,6 +44,10 @@ put '/poems/:id' do
 end
 
 post '/poems' do
-  Poem.create(params[:poem])
-  redirect '/poems'
+  if session[:user_id]
+    poem = Poem.create(title: params[:title], body: params[:body], user_id: session[:user_id])
+    redirect "poems/#{poem.id}"
+  else
+    redirect "/sessions/new"
+  end
 end
