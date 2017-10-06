@@ -57,31 +57,69 @@ h1 {
   }
 }
 
-.new-user {
-  width: 460px;
-  flex-wrap: wrap;
-  display: flex;
+.new-user-ajax {
+  top: -75px;
+  left: 30px;
+  position: absolute;
   label {
-    @include user-form-fields;
-    width: 100px;
+    color: $white;
   }
-  input[type=text] {
-    @include user-form-fields;
-  }
-  input[type=email] {
-    @include user-form-fields;
-  }
-  input[type=password] {
-    @include user-form-fields;
-  }
-  input[type=submit] {
-    @include user-form-fields;
-    width: 100px;
-    display: block;
-    text-align: center;
-    align-items: right;
+  input {
+    padding: 7px;
   }
 }
+
+.new-session-ajax {
+  top: -125px;
+  left: 30px;
+  position: absolute;
+  label {
+    color: $white;
+  }
+  input {
+    padding: 7px;
+  }
+}
+
+#login-error {
+  top: -175px;
+  left: 30px;
+  position: absolute;
+  color: $white;
+}
+
+#new-user-success {
+  top: -90px;
+  left: 30px;
+  position: absolute;
+  color: $white;
+  font-size: 1.7em;
+}
+// .new-user {
+//   width: 460px;
+//   flex-wrap: wrap;
+//   display: flex;
+//   label {
+//     @include user-form-fields;
+//     width: 100px;
+//   }
+//   input[type=text] {
+//     @include user-form-fields;
+//   }
+//   input[type=email] {
+//     @include user-form-fields;
+//   }
+//   input[type=password] {
+//     @include user-form-fields;
+//   }
+//   input[type=submit] {
+//     @include user-form-fields;
+//     width: 100px;
+//     display: block;
+//     text-align: center;
+//     align-items: right;
+//   }
+// }
 
 .submit-poem-link {
   @include header-links;
@@ -110,8 +148,6 @@ h1 {
   top: -75px;
   left: 30px;
 }
-
-
 
 #moss-header {
   max-width: 100%;

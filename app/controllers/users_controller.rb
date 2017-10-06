@@ -1,15 +1,29 @@
 get '/users/new' do
-  erb :'/users/new'
+  if request.xhr?
+    erb :'/users/new', layout: false
+  else
+    erb :'/users/new'
+  end
 end
 
 post '/users' do
   @user = User.new(params[:user])
-  if @user.valid?
-    @user.save
-    redirect '/sessions/new'
+  if request.xhr?
+    if @user.valid?
+      @user.save
+      erb :'/sessions/new', layout: false
+    else
+      @errors = @user.errors
+      erb :'/users/new'
+    end
   else
-    @errors = @user.errors
-    erb :'/users/new'
+    if @user.valid?
+      @user.save
+      redirect '/sessions/new'
+    else
+      @errors = @user.errors
+      erb :'/users/new'
+    end
   end
 end
 
