@@ -1,7 +1,23 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+  $(".header-wrapper").on("click", ".login-link", (event) => {
+    event.preventDefault();
+    const url = $(event.target).attr("href");
+    $.ajax({
+      url
+    }).done((response) => {
+      $(".login-link").hide();
+      $(".header-wrapper").append(response);
+    });
+  });
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  $(".header-wrapper").on("click", ".create-user-link", (event) => {
+    event.preventDefault();
+    const url = $(event.target).attr("href");
+    $.ajax({
+      url
+    }).done((response) => {
+      $(".create-user-link").hide();
+      $(".header-wrapper").append(response);
+    });
+  });
 });

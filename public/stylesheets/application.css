@@ -31,39 +31,18 @@ h1 {
     text-align: center; }
 
 .new-user {
-  width: 460px;
-  flex-wrap: wrap;
-  display: flex; }
+  top: -75px;
+  left: 30px;
+  position: absolute; }
   .new-user label {
-    padding: 10px;
-    margin: 10px;
-    width: 150px;
-    flex-direction: column;
-    width: 100px; }
-  .new-user input[type=text] {
-    padding: 10px;
-    margin: 10px;
-    width: 150px;
-    flex-direction: column; }
-  .new-user input[type=email] {
-    padding: 10px;
-    margin: 10px;
-    width: 150px;
-    flex-direction: column; }
-  .new-user input[type=password] {
-    padding: 10px;
-    margin: 10px;
-    width: 150px;
-    flex-direction: column; }
-  .new-user input[type=submit] {
-    padding: 10px;
-    margin: 10px;
-    width: 150px;
-    flex-direction: column;
-    width: 100px;
-    display: block;
-    text-align: center;
-    align-items: right; }
+    color: #ffffff; }
+
+.new-session {
+  top: -125px;
+  left: 30px;
+  position: absolute; }
+  .new-session label {
+    color: #ffffff; }
 
 .submit-poem-link {
   position: absolute;
