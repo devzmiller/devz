@@ -39,4 +39,17 @@ $(document).ready(function() {
       };
     });
   });
+
+  $(".header-wrapper").on("submit", ".new-user", () => {
+    event.preventDefault();
+    const url = $(event.target).attr("action");
+    const data = $(event.target).serialize();
+    $.ajax({
+      url,
+      data,
+      method: "POST"
+    }).done((response) => {
+      console.log(response)
+    });
+  });
 });
