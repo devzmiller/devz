@@ -57,25 +57,36 @@ h1 {
   }
 }
 
-.new-user {
+.new-user-ajax {
   top: -75px;
   left: 30px;
   position: absolute;
   label {
     color: $white;
   }
+  input {
+    padding: 7px;
+  }
 }
 
-.new-session {
+.new-session-ajax {
   top: -125px;
   left: 30px;
   position: absolute;
   label {
     color: $white;
   }
+  input {
+    padding: 7px;
+  }
 }
 
-
+#login-error {
+  top: -175px;
+  left: 30px;
+  position: absolute;
+  color: $white;
+}
 // .new-user {
 //   width: 460px;
 //   flex-wrap: wrap;
@@ -129,8 +140,6 @@ h1 {
   top: -75px;
   left: 30px;
 }
-
-
 
 #moss-header {
   max-width: 100%;

@@ -7,6 +7,7 @@ $(document).ready(function() {
     }).done((response) => {
       $(".login-link").hide();
       $(".header-wrapper").append(response);
+      $(".new-session").addClass("new-session-ajax");
     });
   });
 
@@ -18,6 +19,24 @@ $(document).ready(function() {
     }).done((response) => {
       $(".create-user-link").hide();
       $(".header-wrapper").append(response);
+      $(".new-user").addClass("new-user-ajax");
+    });
+  });
+
+  $(".header-wrapper").on("submit", ".new-session", (event) => {
+    event.preventDefault();
+    const url = $(event.target).attr("action");
+    const data = $(event.target).serialize();
+    $.ajax({
+      url,
+      data,
+      method: "POST"
+    }).done((response) => {
+      if (response.includes("login-error")) {
+        $(".header-wrapper").append(response);
+      } else {
+        window.location.href = response;
+      };
     });
   });
 });

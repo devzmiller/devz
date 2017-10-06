@@ -30,19 +30,29 @@ h1 {
     font-size: 90px;
     text-align: center; }
 
-.new-user {
+.new-user-ajax {
   top: -75px;
   left: 30px;
   position: absolute; }
-  .new-user label {
+  .new-user-ajax label {
     color: #ffffff; }
+  .new-user-ajax input {
+    padding: 7px; }
 
-.new-session {
+.new-session-ajax {
   top: -125px;
   left: 30px;
   position: absolute; }
-  .new-session label {
+  .new-session-ajax label {
     color: #ffffff; }
+  .new-session-ajax input {
+    padding: 7px; }
+
+#login-error {
+  top: -175px;
+  left: 30px;
+  position: absolute;
+  color: #ffffff; }
 
 .submit-poem-link {
   position: absolute;
