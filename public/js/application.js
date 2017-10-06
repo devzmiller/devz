@@ -49,7 +49,10 @@ $(document).ready(function() {
       data,
       method: "POST"
     }).done((response) => {
-      console.log(response)
+      $(".login-link").hide();
+      $(".header-wrapper").append(response);
+      $(".new-session").addClass("new-session-ajax");
+      $(".new-user").replaceWith("<p id='new-user-success'>Success!</p>")
     });
   });
 });
